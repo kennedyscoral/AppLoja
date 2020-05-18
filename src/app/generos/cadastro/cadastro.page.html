@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="barra" color="tertiary">
+    <ion-title>Cadastro de Generos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #generoForm="ngForm" novalidate>
+    <ion-item>
+      <ion-label position="floating">Nome *:</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="genero.nome" required #campoNome="ngModel">
+      </ion-input>
+      <ion-text color="danger" *ngIf="campoNome.invalid && (campoNome.dirty || campoNome.touched)">
+        <small>
+          <span *ngIf="campoNome.errors.required">
+            O nome é obrigatório.
+          </span>                    
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="center">
+      <ion-fab-button (click)="salvar()" [disabled]="generoForm.invalid" color="tertiary">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button class="btnLixo" (click)="confirmarExclusao(genero)" [disabled]="disabled" show="false" color="tertiary">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </form>
+</ion-content>

@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar class="barra" color="tertiary">
+    <ion-title>Cadastro de Roupas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #roupaForm="ngForm" novalidate>
+
+    <ion-item>
+      <ion-label position="floating">Imagem (URL): </ion-label>
+      <ion-input #imagem="ngModel" type="url" [(ngModel)]="roupa.imagem" name="imagem" required></ion-input>
+      <ion-text color="danger" *ngIf="imagem.invalid && (imagem.dirty || imagem.touched)">
+        <small>
+          <span *ngIf="imagem.errors.required">
+            A imagem é obrigatória.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-input #nome="ngModel" type="text" [(ngModel)]="roupa.nome" name="nome" required minlength="3"></ion-input>
+      <ion-text color="danger" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+        <small>
+          <span *ngIf="nome.errors.required">
+            O nome é obrigatório
+          </span>
+          <span *ngIf="nome.errors.minlength">
+            O nome deve ter no mínimo 3 caracteres
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Marcas:</ion-label>
+      <ion-select [(ngModel)]="roupa.marcas" multiple="false" placeholder="Selecione as marcas"
+        [compareWith]="compareWith" name="marca" >
+        <ion-select-option *ngFor="let marca of marcas" [value]="marca">
+          {{marca.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Generos:</ion-label>
+      <ion-select [(ngModel)]="roupa.generos" multiple="false" placeholder="Selecione as generos"
+        [compareWith]="compareWith" name="genero" >
+        <ion-select-option *ngFor="let genero of generos" [value]="genero">
+          {{genero.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tamanhos:</ion-label>
+      <ion-select [(ngModel)]="roupa.tamanhos" multiple="true" placeholder="Selecione os tamanhos"
+        [compareWith]="compareWith" name="tamanho" >
+        <ion-select-option *ngFor="let tamanho of tamanhos" [value]="tamanho">
+          {{tamanho.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Cores:</ion-label>
+      <ion-select [(ngModel)]="roupa.cores" multiple="true" placeholder="Selecione as cores"
+        [compareWith]="compareWith" name="cor" >
+        <ion-select-option *ngFor="let cor of cores" [value]="cor">
+          {{cor.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Preço: </ion-label>
+      <ion-input #preco="ngModel" type="number" [(ngModel)]="roupa.preco" name="preco" required min="0" pattern="[0-9]+\.?[0-9]*"></ion-input>
+      <ion-text color="danger" *ngIf="preco.invalid && (preco.dirty || preco.touched)">
+        <small>
+          <span *ngIf="preco.errors.required">
+            O preço é obrigatório.
+          </span>
+          <span *ngIf="preco.errors.pattern">
+            O preço deve ser superior a 0,00.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estoque: </ion-label>
+      <ion-input #estoque="ngModel" type="number" [(ngModel)]="roupa.estoque" name="estoque" required min="0"></ion-input>
+      <ion-text color="danger" *ngIf="estoque.invalid && (estoque.dirty || estoque.touched)">
+        <small>
+          <span *ngIf="estoque.errors.required">
+            O estoque é obrigatório.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="center">
+      <ion-fab-button (click)="salvar(roupa)" [disabled]="roupaForm.invalid" color="tertiary">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>
