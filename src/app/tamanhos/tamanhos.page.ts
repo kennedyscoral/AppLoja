@@ -13,7 +13,6 @@ export class TamanhosPage implements OnInit {
   tamanhos: Tamanho[];
 
   constructor(
-    private alertController: AlertController,
     private tamanhoService: TamanhoService,
     private loadingController: LoadingController 
   ) { }

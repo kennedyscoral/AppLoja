@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import { CorService } from '../services/cor.service';
 import { Cor } from '../models/cor.interface';
 
@@ -13,7 +13,6 @@ export class CoresPage implements OnInit {
   cores: Cor[];
 
   constructor(
-    private alertController: AlertController,
     private corService: CorService,
     private loadingController: LoadingController 
   ) { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RoupaService } from '../services/roupa.service';
 import { Roupa } from '../models/roupa.interface';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { BusyLoaderService } from '../services/busy-loader.service';
 
 @Component({
@@ -56,5 +56,4 @@ export class RoupasPage implements OnInit {
       busyLoader.dismiss();
     });
   }
-
 }

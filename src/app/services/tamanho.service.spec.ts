@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { TamanhoService } from './tamanho.service';
 
 describe('TamanhoService', () => {

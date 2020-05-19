@@ -3,7 +3,6 @@ import { LoadingController } from '@ionic/angular';
 
 @Injectable({providedIn: 'root'})
 export class BusyLoaderService {
-
     constructor(
         private loadingController:LoadingController
     ) {}
@@ -13,5 +12,4 @@ export class BusyLoaderService {
         busyLoader.present();        
         return busyLoader;
     }
-
 }

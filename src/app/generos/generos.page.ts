@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import { GeneroService } from '../services/genero.service';
 import { Genero } from '../models/genero.interface';
 
@@ -13,7 +13,6 @@ export class GenerosPage implements OnInit {
   generos: Genero[];
 
   constructor(
-    private alertController: AlertController,
     private generoService: GeneroService,
     private loadingController: LoadingController 
   ) { }

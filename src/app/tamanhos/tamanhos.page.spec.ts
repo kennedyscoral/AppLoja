@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
 import { TamanhosPage } from './tamanhos.page';
 
 describe('TamanhosPage', () => {
