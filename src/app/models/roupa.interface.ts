@@ -13,4 +13,5 @@ export interface Roupa {
     cores: Cor[];
     preco: number;
     estoque: number;
+    reservado: number;
 }

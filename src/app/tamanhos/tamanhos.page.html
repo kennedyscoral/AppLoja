@@ -9,8 +9,9 @@
 
 <ion-content>
   <ion-list class="lista">
-    <ion-item *ngFor="let tamanho of tamanhos" [routerLink]="['/tamanhos/cadastro', tamanho.id]">
+    <ion-item *ngFor="let tamanho of tamanhos" [routerLink]="['/tamanhos/cadastro', tamanho.id]" detail="false">
       {{tamanho.nome}}
+      <ion-icon name="chevron-forward-outline" slot="end" color="tertiary"></ion-icon>
     </ion-item>
   </ion-list>
 

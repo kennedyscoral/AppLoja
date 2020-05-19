@@ -9,8 +9,9 @@
 
 <ion-content>
   <ion-list class="lista">
-    <ion-item *ngFor="let genero of generos" [routerLink]="['/generos/cadastro', genero.id]">
+    <ion-item *ngFor="let genero of generos" [routerLink]="['/generos/cadastro', genero.id]" detail="false"> 
       {{genero.nome}}
+      <ion-icon name="chevron-forward-outline" slot="end" color="tertiary"></ion-icon>
     </ion-item>
   </ion-list>
 

@@ -69,7 +69,7 @@
   ],
   "roupas": [
     {
-      "nome": "Camiseta Gola Polo",
+      "nome": "Camiseta Polo",
       "marcas": {
         "nome": "Lacoste",
         "id": 1
@@ -117,7 +117,8 @@
       "imagem": "https://cdn.awsli.com.br/600x450/647/647032/produto/36998859/4466635f85.jpg",
       "preco": 89.9,
       "id": 1,
-      "estoque": 17
+      "estoque": 26,
+      "reservado": 2
     },
     {
       "nome": "Camiseta Verão",

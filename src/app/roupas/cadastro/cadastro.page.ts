@@ -44,7 +44,8 @@ export class CadastroPage implements OnInit {
       cores: [],
       imagem: '',
       preco: 0.00,
-      estoque: 0
+      estoque: 0,
+      reservado: 0
     };
   }
 
