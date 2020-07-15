@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar class="barra" color="tertiary">
+    <ion-title>Loja de Roupas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-list lines="none">  
+
+    <ion-card [routerLink]="['/roupas']" class="card-roupa">
+      <ion-item>
+        <ion-icon class="icon-roupa" name="glasses-outline" slot="start"></ion-icon>
+      </ion-item>
+      <ion-item class="label-roupa">        
+        <ion-label>Roupas</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/marcas']" class="card1">
+      <ion-item>
+        <ion-icon class="icon-marca" name="pricetag-outline" slot="start"></ion-icon>
+      </ion-item>
+      <ion-item class="label-marca">        
+        <ion-label>Marcas</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/tamanhos']" class="card1">
+      <ion-item>
+        <ion-icon class="icon-tamanho" name="resize-outline" slot="start"></ion-icon>
+      </ion-item>
+      <ion-item class="label-tamanho">        
+        <ion-label>Tamanhos</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/generos']" class="card2">
+      <ion-item>
+        <ion-icon class="icon-genero" name="transgender-outline" slot="start"></ion-icon>
+      </ion-item>
+      <ion-item class="label-genero">        
+        <ion-label>Gêneros</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/cores']" class="card2">
+      <ion-item>
+        <ion-icon class="icon-cor" name="color-fill-outline" slot="start"></ion-icon>
+      </ion-item>
+      <ion-item class="label-cor">        
+        <ion-label>Cores</ion-label>
+      </ion-item>
+    </ion-card>
+
+
+    <!-- <ion-item>
+      <ion-icon slot="start" name="glasses-outline"></ion-icon>
+      <ion-label [routerLink]="['/roupas']">Roupas</ion-label>
+    </ion-item> -->
+    <!-- <ion-item>
+      <ion-icon slot="start" name="pricetag-outline"></ion-icon>
+      <ion-label [routerLink]="['/marcas']">Marcas</ion-label>
+    </ion-item> -->
+    <!-- <ion-item>
+      <ion-icon slot="start" name="resize-outline"></ion-icon>
+      <ion-label [routerLink]="['/tamanhos']">Tamanhos</ion-label>
+    </ion-item> -->
+    <!-- <ion-item>
+      <ion-icon slot="start" name="transgender-outline"></ion-icon>
+      <ion-label [routerLink]="['/generos']">Gêneros</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="color-fill-outline"></ion-icon>
+      <ion-label [routerLink]="['/cores']">Cores</ion-label>
+    </ion-item> -->
+  </ion-list>
+</ion-content>
+
+

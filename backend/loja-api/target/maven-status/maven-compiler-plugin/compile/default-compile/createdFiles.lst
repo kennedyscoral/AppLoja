@@ -1,0 +1,12 @@
+br\com\lojaapi\models\Roupa.class
+br\com\lojaapi\resources\RoupaResource.class
+br\com\lojaapi\resources\GeneroResource.class
+br\com\lojaapi\models\Tamanho.class
+br\com\lojaapi\resources\CorResource.class
+br\com\lojaapi\resources\MarcaResource.class
+br\com\lojaapi\JAXRSConfiguration.class
+br\com\lojaapi\models\Cor.class
+br\com\lojaapi\resources\TamanhoResource.class
+br\com\lojaapi\models\Genero.class
+br\com\lojaapi\CorsFilter.class
+br\com\lojaapi\models\Marca.class
